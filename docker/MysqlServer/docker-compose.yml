@@ -1,0 +1,12 @@
+angmysqldata:
+  build: data/.
+angmysql:
+  build: .
+  ports:
+    - "3307:3306"
+  environment:
+    MYSQL_ROOT_PASSWORD: 1234
+  volumes:
+    - ./startup:/docker-entrypoint-initdb.d
+  volumes_from:
+    - angmysqldata

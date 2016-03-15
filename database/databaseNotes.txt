@@ -1,0 +1,18 @@
+Migration.....
+
+create a database in mysql and set up a connection in .env
+
+//i don't think this will work bc I need to setup the main connection...
+php artisan migrate --database='main'  --path=database/migrations/craiglorious
+
+ php artisan migrate:refresh --seed
+
+ php artisan zz:deleteAllSystems -v
+ deletes all craiglorious table and system tables, remigrates, reseeds
+
+
+
+php artisan zz:CreateMigrationsFromDatabase -v
+makes the migration files from a connection (should be all set)
+
+Tenant...
