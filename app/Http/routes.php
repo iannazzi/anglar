@@ -11,7 +11,9 @@
 |
 */
 
+
 Route::get('/', 'AngularController@serveApp');
+
 
 Route::get('/unsupported-browser', 'AngularController@unsupported');
 
@@ -26,14 +28,20 @@ Route::get('/unsupported-browser', 'AngularController@unsupported');
 |
 */
 
+
+
 Route::group(['middleware' => ['web']], function () {
     //
 });
 
+//$api comes from dingo api
+
 $api->group([], function ($api) {
 
-    $api->post('users/login', 'LoginController@login');
-    $api->post('todos', 'TodosController@create');
+    //$api->get('test', 'Test\TestController@test');
+    $api->post('users/login', 'Auth\LoginController@login');
+    $api->post('register', ['as' => 'register.store', 'uses' => 'Register\RegisterController@postRegister']);
+
 
 });
 
@@ -41,5 +49,8 @@ $api->group([], function ($api) {
 $api->group(['middleware' => 'api.auth'], function ($api) {
 
     $api->get('sample/protected', 'LoginController@protectedData');
+    $api->post('todos', 'TodosController@create');
+
+
 
 });

@@ -1,7 +1,7 @@
 <?php namespace App\Models\Tenant;
 
 use App\Models\BaseTenantModel;
-use App\Models\Craiglorious\AccountType;
+use App\Models\Main\AccountType;
 
 class Company extends BaseTenantModel {
 

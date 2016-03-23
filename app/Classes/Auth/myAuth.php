@@ -1,7 +1,9 @@
-<?php namespace App\Classes\Auth;
+<?php 
+
+namespace App\Classes\Auth;
 
 use App\Classes\Database\TenantDatabaseConnector;
-use  App\Models\Craiglorious\System;
+use  App\Models\Main\System;
 use Illuminate\Contracts\Auth\Guard;
 use Redirect, Session, Log;
 

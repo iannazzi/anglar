@@ -14,14 +14,14 @@ class BaseModel extends Model
         return $this->$column;
 
     }
-    public static function create(array $attributes = [])
-    {
-        try{
-            Parent::create($attributes);
-        }
-        catch(Exception $e)
-        {
-            dd($e->getMessage());
-        }
-    }
+//    public static function create(array $attributes = [])
+//    {
+//        try{
+//            Parent::create($attributes);
+//        }
+//        catch(Exception $e)
+//        {
+//            dd($e->getMessage());
+//        }
+//    }
 }

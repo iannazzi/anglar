@@ -1,7 +1,7 @@
 <?php
 
 
-use App\Models\Craiglorious\System;
+use App\Models\Main\System;
 use App\Models\Tenant\Product;
 use App\Models\Tenant\ProductAttribute;
 use App\Models\Tenant\ProductOption;

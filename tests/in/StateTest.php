@@ -1,6 +1,6 @@
 <?php
 
-use App\Models\Craiglorious\State;
+use App\Models\Main\State;
 use IannazziTestLibrary\Tests\ApiTester;
 
 class StateTest extends ApiTester

@@ -1,0 +1,28 @@
+Migration.....
+
+create a database in mysql and set up a connection in .env
+
+currently use the docker for mysql....
+
+to get the database made:
+php artisan migrate --database='main'  --path=database/migrations/main
+php artisan db:seed --class="localDatabaseSeeder"
+
+
+change the db tables then reload them....
+ try
+ php artisan migrate:refresh --database='main'  --path=database/migrations/main
+
+otherwise
+
+ php artisan zz:DeleteAllSystems -v
+
+
+
+
+
+
+php artisan zz:CreateMigrationsFromDatabase -v
+makes the migration files from a connection (should be all set)
+
+Tenant...

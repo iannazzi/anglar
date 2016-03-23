@@ -3,7 +3,7 @@
 use App\Classes\TenantSystem\TenantSystemBuilder;
 use Illuminate\Database\Seeder;
 use Illuminate\Database\Eloquent\Model;
-use App\Models\Craiglorious\System;
+use App\Models\Main\System;
 
 class localDatabaseSeeder extends Seeder
 {
@@ -18,7 +18,7 @@ class localDatabaseSeeder extends Seeder
     {
 		Model::unguard();
 
-    	$this->call('CraigloriousDatabaseSeeder');
+    	$this->call('MainDatabaseSeeder');
 
         $systems = System::all();
         foreach ($systems as $system)

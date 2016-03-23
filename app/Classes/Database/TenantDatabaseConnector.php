@@ -1,6 +1,6 @@
 <?php namespace App\Classes\Database;
 
-use App\Models\Craiglorious\System;
+use App\Models\Main\System;
 use DB, Config;
 
 class TenantDatabaseConnector
@@ -27,7 +27,7 @@ class TenantDatabaseConnector
             'collation' => 'utf8_unicode_ci',
             'prefix'    => '',
             'strict'    => false,
-            'port' => '3306'
+            'port' => env($env. '_DB_PORT'),
         ];
         $connections[$system->dbc()] = $tenant_connection;
         Config::set('database.connections', $connections);

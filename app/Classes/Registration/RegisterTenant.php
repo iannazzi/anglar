@@ -3,7 +3,7 @@ namespace App\Classes\Registration;
 
 
 use App\Classes\TenantSystem\TenantSystemBuilder;
-use App\Models\Craiglorious\System;
+use App\Models\Main\System;
 
 class RegisterTenant {
 

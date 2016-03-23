@@ -15,7 +15,7 @@
 //factories dont seem to make sense for tables that have
 //foreign keys
 
-$factory->define(App\Models\Craiglorious\Todo::class, function (Faker\Generator $faker) {
+$factory->define(App\Models\Main\Todo::class, function (Faker\Generator $faker) {
     return [
         'task' => $faker->company,
         'completed' => $faker->boolean(),

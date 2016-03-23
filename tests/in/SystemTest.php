@@ -1,7 +1,7 @@
 <?php
 
 use App\Classes\TenantSystem\TenantSystemBuilder;
-use App\Models\Craiglorious\System;
+use App\Models\Main\System;
 use IannazziTestLibrary\Tests\ApiTester;
 
 class SystemTest extends ApiTester

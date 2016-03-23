@@ -1,20 +1,66 @@
-<md-content class="Page-Container DemoHeader">
-	<div layout="row">
-		<div flex="90" flex-offset="5" class="DemoHeader-container">
-			<div layout="row" layout-align="space-between">
-				<img src="img/icons/logo.svg" class="DemoHeader-logo" ui-sref="app.landing"/>
-				<div layout="row" layout-align="center stretch" hide-xs>
-					<a class="DemoHeader-link md-subhead" ui-sref="app.register">Register</a>
+<!-- Fixed navbar -->
+<nav class="navbar navbar-default navbar-fixed-top navbar-inverse">
+    <div class="container">
+        <div class="navbar-header">
+            <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            <a class=" header_title navbar-brand" href="#">Craiglorious</a>
+        </div>
+        <div id="navbar" class="navbar-collapse collapse">
+            <ul class="nav navbar-nav">
+                <li><a href="#about">About</a></li>
+                <li><a href="#contact">Contact</a></li>
+                <li class="dropdown">
+                    <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Dropdown <span class="caret"></span></a>
+                    <ul class="dropdown-menu">
+                        <li><a href="#">Action</a></li>
+                        <li><a href="#">Another action</a></li>
+                        <li><a href="#">Something else here</a></li>
+                        <li role="separator" class="divider"></li>
+                        <li class="dropdown-header">Nav header</li>
+                        <li><a href="#">Separated link</a></li>
+                        <li><a href="#">One more separated link</a></li>
+                    </ul>
+                </li>
+            </ul>
+            <ul class="nav navbar-nav navbar-right">
+                <li><a href="#login">Login</a></li>
+                <li><a href="#register">Register</a></li>
+                <li><a href="#register" target="_blank"><i class="fa fa-plus-circle"></i></a></li>
 
 
+                <!--<li class="active"><a href="./">Fixed top <span class="sr-only">(current)</span></a></li>-->
+            </ul>
+        </div><!--/.nav-collapse -->
+    </div>
+</nav>
 
-					<a class="DemoHeader-link md-subhead" href="https://laravel-angular.readme.io" target="_blank">Docs</a>
-					<a class="DemoHeader-link md-subhead" href="https://www.youtube.com/watch?v=Auc61qSC3SY&list=PLIiQ4B5FSupiQYLX6kERPV0OhMC7tTbBE" target="_blank">Screencasts</a>
-					<a class="DemoHeader-link md-subhead" href="https://github.com/jadjoubran/laravel5-angular-material-starter" target="_blank">Github</a>
-					<iframe class="DemoHeader-github" src="https://ghbtns.com/github-btn.html?user=jadjoubran&repo=laravel5-angular-material-starter&type=star&count=true&size=large" frameborder="0" scrolling="0" width="160px" height="30px"></iframe>
-				</div>
-			</div>
-		</div>
-	</div>
-</md-content>
-<div class="DemoHeader-spacer"></div>
+
+<!--<nav class="navbar navbar-inverse navbar-fixed-top">-->
+    <!--<div class="container">-->
+        <!--<div class="navbar-header">-->
+            <!--<button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">-->
+                <!--<span class="sr-only">Toggle navigation</span>-->
+                <!--<span class="icon-bar"></span>-->
+                <!--<span class="icon-bar"></span>-->
+                <!--<span class="icon-bar"></span>-->
+            <!--</button>-->
+            <!--<a class="navbar-brand" href="#">Craiglorious</a>-->
+        <!--</div>-->
+        <!--<div id="navbar" class="collapse navbar-collapse">-->
+            <!--<ul class="nav navbar-nav">-->
+                <!--<li><a href="#login">Login</a></li>-->
+                <!--<li><a href="#register">Register</a></li>-->
+
+                <!--&lt;!&ndash;<li><a class="Header-link md-subhead" ui-sref="app.login">Login</a></li>&ndash;&gt;-->
+                <!--&lt;!&ndash;<li><a class="Header-link md-subhead" ui-sref="app.register">Register</a></li>&ndash;&gt;-->
+
+
+            <!--</ul>-->
+        <!--</div>&lt;!&ndash;/.nav-collapse &ndash;&gt;-->
+    <!--</div>-->
+<!--</nav>-->

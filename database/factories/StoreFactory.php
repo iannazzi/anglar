@@ -1,8 +1,8 @@
 <?php
 
 
-use App\Models\Craiglorious\TaxJurisdiction;
-use App\Models\Craiglorious\ZipCode;
+use App\Models\Main\TaxJurisdiction;
+use App\Models\Main\ZipCode;
 use App\Models\Tenant\Address;
 
 $factory->define(App\Models\Tenant\Store::class, function (Faker\Generator $faker) {

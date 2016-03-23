@@ -2,7 +2,7 @@
 
 namespace App\Http\Controllers;
 
-use App\Models\Craiglorious\Todo;
+use App\Models\Main\Todo;
 use Illuminate\Http\Request;
 
 use App\Http\Requests;

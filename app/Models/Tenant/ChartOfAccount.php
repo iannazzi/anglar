@@ -1,8 +1,8 @@
 <?php namespace App\Models\Tenant;
 
 use App\Models\BaseTenantModel;
-use App\Models\Craiglorious\ChartOfAccountsRequired;
-use App\Models\Craiglorious\ChartOfAccountType;
+use App\Models\Main\ChartOfAccountsRequired;
+use App\Models\Main\ChartOfAccountType;
 
 class ChartOfAccount extends BaseTenantModel {
 

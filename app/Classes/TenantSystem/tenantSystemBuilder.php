@@ -13,7 +13,7 @@ use App\Classes\Database\TenantDatabaseConnector;
 
 use Symfony\Component\Console\Output\ConsoleOutput;
 
-use App\Models\Craiglorious\System;
+use App\Models\Main\System;
 use App\Models\Tenant\User;
 
 

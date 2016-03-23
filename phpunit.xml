@@ -9,9 +9,11 @@
          processIsolation="false"
          stopOnFailure="false">
     <testsuites>
-
+        <testsuite name="ang">
+            <file>tests/main/TodoTest.php</file>
+        </testsuite>
         <testsuite name="Cgsetup">
-            <file>tests/in/CraigloriousSetupTest.php</file>
+            <file>tests/in/MainDatabaseSetupTest.php</file>
         </testsuite>
         <testsuite name="Cgsetup">
             <file>tests/TodoTest.php</file>

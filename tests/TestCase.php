@@ -144,6 +144,6 @@ class TestCase extends TC
     }
     public function seeJsonKeyValueBoolean($key, $value)
     {
-        return $this->see('"'.$key.'":'. (boolean) $value);
+        return $this->see('"'.$key.'":'. (bool) $value);
     }
 }

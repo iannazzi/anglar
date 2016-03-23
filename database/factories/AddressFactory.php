@@ -1,8 +1,8 @@
 <?php
 
 
-use App\Models\Craiglorious\State;
-use App\Models\Craiglorious\ZipCode;
+use App\Models\Main\State;
+use App\Models\Main\ZipCode;
 
 $factory->define(App\Models\Tenant\Address::class, function (Faker\Generator $faker) {
     $zip = ZipCode::all()->random(1);

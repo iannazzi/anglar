@@ -10,7 +10,7 @@ class TodoTest extends TestCase
     /** @test */
     public function create_a_todo_sucessfully()
     {
-        $todo = factory(App\Models\Craiglorious\Todo::class)->make();
+        $todo = factory(App\Models\Main\Todo::class)->make();
         $this->post('/api/todos', [
             'task' => $todo->task,
             'completed' => $todo->completed
@@ -19,7 +19,7 @@ class TodoTest extends TestCase
         ->seeJsonObject('todo')
         ->seeJsonKeyValueString('task', $todo->task);
 
-        $this->seeJsonKeyValueBoolean('completed', $todo->completed);
+        $this->seeJsonKeyValue('completed', $todo->completed);
 
         $this->seeInDatabase('todos',[
             'task' => $todo->task,

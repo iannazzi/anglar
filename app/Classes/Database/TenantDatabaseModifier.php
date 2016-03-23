@@ -1,6 +1,6 @@
 <?php
 namespace App\Classes\Database;
-use App\Models\Craiglorious\System;
+use App\Models\Main\System;
 use Log,DB;
 use Symfony\Component\Console\Output\ConsoleOutput;
 

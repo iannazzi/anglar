@@ -1,7 +1,7 @@
 {
-  "name": "laravel5-angular-material-starter",
+  "name": "laravel5-angular-bootstrap-starter",
   "authors": [
-    "Jad Joubran <jad@jadjoubran.com>"
+    "Craig Iannazzi <ci@embrasse-moi.com>"
   ],
   "ignore": [
     "**/.*",
@@ -17,12 +17,17 @@
     "angular-material": "~1.0",
     "restangular": "~1.5.2",
     "angular-loading-bar": "~0.8.0",
-
-    "jquery": "~2.2.1",
-    "jquery-ui": "jqueryui#~1.11.4",
-    "bootstrap": "~3.3.5",
-    "vue": "~1.0.17",
-    "vue-router": "^0.7.11"
-
+    "bootstrap": "^3.3.6",
+    "angular-cookies": "^1.5.2",
+    "satellizer": "^0.14.0"
+  },
+  "overrides": {
+    "bootstrap": {
+      "main": [
+        "dist/css/bootstrap.css",
+        "dist/css/bootstrap-theme.css",
+        "dist/js/bootstrap.js"
+      ]
+    }
   }
 }

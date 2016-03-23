@@ -26,7 +26,7 @@ class AppServiceProvider extends ServiceProvider
     {
         MainDatabaseConnector::createMainConnection();
         if ($this->app->environment() == 'local') {
-            //$this->app->register('Iannazzi\Generators\ImporterServiceProvider');
+            $this->app->register('Iannazzi\Generators\ImporterServiceProvider');
 
         }
     }

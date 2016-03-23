@@ -15,7 +15,7 @@ function getTenantDatabaseConnectionName()
     }
     //dd(Session);*/
     $system_id = session('system_id');
-    $system = App\Models\Craiglorious\System::find($system_id);
+    $system = App\Models\Main\System::find($system_id);
     if (!$system)
     {
         trigger_error('no system....');

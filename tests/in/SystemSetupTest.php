@@ -5,7 +5,7 @@
 use Iannazzi\Generators\DatabaseImporter\DatabaseDestroyer;
 use IannazziTestLibrary\Tests\ApiTester;
 use App\Classes\TenantSystem\TenantSystemBuilder;
-use App\Models\Craiglorious\System;
+use App\Models\Main\System;
 
 class SystemSetupTest extends ApiTester
 {

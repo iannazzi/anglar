@@ -1,7 +1,7 @@
 <?php
 
-use App\Models\Craiglorious\State;
-use App\Models\Craiglorious\ZipCode;
+use App\Models\Main\State;
+use App\Models\Main\ZipCode;
 use App\Models\Tenant\Address;
 use Iannazzi\Generators\DatabaseImporter\DatabaseCSVCreator;
 use IannazziTestLibrary\Tests\ApiTester;

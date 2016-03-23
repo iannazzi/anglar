@@ -1,6 +1,6 @@
 <?php
 
-$factory->define(App\Models\Craiglorious\System::class, function (Faker\Generator $faker) {
+$factory->define(App\Models\Main\System::class, function (Faker\Generator $faker) {
     return  [
         'company' => $faker->company,
         'name' => $faker->name,
@@ -10,7 +10,7 @@ $factory->define(App\Models\Craiglorious\System::class, function (Faker\Generato
         'password' => bcrypt('password'),
     ];
 });
-$factory->defineAs(App\Models\Craiglorious\System::class, 'embrasse-moi', function ($faker) {
+$factory->defineAs(App\Models\Main\System::class, 'embrasse-moi', function ($faker) {
     return [
         'name' => 'Craig Iannazzi',
         'company' => 'Embrasse-Moi',

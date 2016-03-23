@@ -1,7 +1,7 @@
 <?php
 namespace IannazziTestLibrary\Tests;
 use App\Classes\TenantSystem\TenantSystemBuilder;
-use App\Models\Craiglorious\System;
+use App\Models\Main\System;
 use Faker\Factory as Faker;
 use Artisan;
 use Iannazzi\Generators\DatabaseImporter\DatabaseDestroyer;
