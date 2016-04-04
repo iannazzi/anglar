@@ -1,6 +1,7 @@
 export function RoutesConfig($stateProvider, $urlRouterProvider) {
     'ngInject';
 
+
     var getView = function (viewName) {
         return './views/app/pages/' + viewName + '/' + viewName + '.page.html';
     };
@@ -12,26 +13,33 @@ export function RoutesConfig($stateProvider, $urlRouterProvider) {
             abstract: true,
             views: {
                 header: {
-                    templateUrl: getView('header')
+                    templateUrl: getView('header'),
+                    controller: 'headerController'
                 },
                 footer: {
                     templateUrl: getView('footer')
                 },
                 main: {}
-            },
+            }
 
         })
-        .state('app.landing', {
+        .state('app.home', {
             url: '/',
+
             views: {
                 'main@': {
-                    templateUrl: getView('landing'),
-                    controller: function ($scope) {
+                    templateUrl: getView('home'),
+                    controller: function ($rootScope, $scope, $auth) {
+                        $rootScope.header = "Craiglorious";
+                        // Page.setTitle('Craiglorious');
+                        $scope.test = '123';
+                        $scope.company = 'Craiglorious';
                         $scope.params = "params";
                         $scope.data = "data";
                         $scope.items = ['a', 'list'];
-
-
+                        $scope.isAuthenticated = function () {
+                            return $auth.isAuthenticated();
+                        };
                     }
                 }
 
@@ -61,19 +69,17 @@ export function RoutesConfig($stateProvider, $urlRouterProvider) {
                     templateUrl: getView('register')
                 }
             }
+
         })
         .state('app.dashboard', {
             url: '/dashboard',
             views: {
                 'main@': {
                     templateUrl: getView('dashboard'),
-                    controller: function ($scope) {
-                        $scope.params = "params";
-                        $scope.data = "data";
-                        $scope.items = ['a', 'list'];
-                    }
+                    controller: 'dashboardController',
                 }
-            }
+            },
+            data: {requiredLogin: true}
         })
 
     ;

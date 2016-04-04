@@ -15,3 +15,7 @@ import './index.components';
 
 //Services
 import './index.services';
+
+//Controllers
+import './index.controllers';
+

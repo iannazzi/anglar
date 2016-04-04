@@ -3,11 +3,13 @@
 namespace App\Http\Controllers\Auth;
 
 use App\Http\Controllers\Controller;
+use App\Http\Controllers\Dashboard\DashboardController;
 use App\Models\Main\System;
 use App\Models\Tenant\User;
 use Illuminate\Foundation\Auth\AuthenticatesAndRegistersUsers;
 use Illuminate\Foundation\Auth\ThrottlesLogins;
 use JWTAuth;
+use Auth;
 use Illuminate\Http\Request;
 use Illuminate\Http\Response;
 use Tymon\JWTAuth\Exceptions\JWTException;
@@ -21,6 +23,7 @@ class LoginController extends Controller
         $credentials = $this->validate($request, [
             'company' => 'required', 'username' => 'required', 'password' => 'required',
         ]);
+        //return response()->success(['data' => 'hello']);
         $throttles = $this->isUsingThrottlesLoginsTrait();
 
         if ($throttles && $this->hasTooManyLoginAttempts($request)) {
@@ -34,7 +37,7 @@ class LoginController extends Controller
             if ($throttles) {
                 $this->incrementLoginAttempts($request);
             }
-            return response()->json(['error' => 'Invalid credentials'], Response::HTTP_UNAUTHORIZED);
+            return response()->error('Invalid Company', Response::HTTP_UNAUTHORIZED);
         }
 
         $system->createTenantConnection();
@@ -46,14 +49,18 @@ class LoginController extends Controller
             $auth['username'] = $credentials['username'];
             $auth['password'] = $credentials['password'];
             if (! $token = JWTAuth::attempt($auth, $custom_claims)) {
-                return response()->json(['error' => 'Invalid credentials'], Response::HTTP_UNAUTHORIZED);
+                return response()->error('Invalid credentials', 401);
+
             }
         } catch (JWTException $e) {
             // something went wrong
-            return response()->json(['error' => 'Could not create token'], Response::HTTP_INTERNAL_SERVER_ERROR);
+            return response()->error('Could not create token', 500);
         }
 
-        return response()->success(['token' => $token]);
+        $user = Auth::user();
+        $binders = DashboardController::getBinders();
+        return response()->success(compact('user', 'token', 'binders'));
+        //return response()->success(['token' => $token]);
     }
 
     public function protectedData()

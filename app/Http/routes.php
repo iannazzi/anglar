@@ -39,7 +39,8 @@ Route::group(['middleware' => ['web']], function () {
 $api->group([], function ($api) {
 
     //$api->get('test', 'Test\TestController@test');
-    $api->post('users/login', 'Auth\LoginController@login');
+    $api->post('auth/login', 'Auth\LoginController@login');
+    //$api->post('users/login', 'Auth\LoginController@login');
     $api->post('register', ['as' => 'register.store', 'uses' => 'Register\RegisterController@postRegister']);
 
 
